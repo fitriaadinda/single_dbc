@@ -1,0 +1,572 @@
+body {
+    background: #000;
+}
+
+.container-mobile {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+}
+
+.background {
+    position: relative;
+    width: 100%;
+	min-height: 100%;
+	height: 812px;
+    overflow: hidden;
+    background: url('../images/switchable-cover.svg') no-repeat top center, #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logo {
+    padding-top: 30px;
+    margin-left: 28px;
+
+    &--black {
+        margin-left: 0;
+    }
+}
+
+.profile {
+    &__image {
+        width: 109px;
+        height: 109px;
+        background: #FFFFFF;
+        padding: 3px;
+        overflow: hidden;
+        //margin: 16px auto 0;
+        //margin: 250px auto 0;
+	    margin: 40% auto 0;
+    }
+
+    &__name {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 27px;
+        text-align: center;
+        letter-spacing: -0.333333px;
+        color: #FFFFFF;
+        margin-top: 12px;
+
+        &-size {
+            font-size: 18px;
+            transform: scale(1);
+            transition: transform 1.5s ease-out;
+
+            &--big {
+                transform: scale(1.2);
+                  transition: transform 1.5s;
+            }
+        }
+    }
+
+    &__position {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: -0.333333px;
+        color: #FFFFFF;
+        margin-top: 4px;
+    }
+}
+
+.button {
+    background: #10C582;
+    border-radius: 21px;
+	padding: 8px 10px;
+    margin: 0 auto;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.666667px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    &--chat {
+        width: 130px;
+        margin-top: 12px;
+    }
+
+    &--room {
+        width: 130px;
+        margin-top: 16px;
+    }
+
+    &--schedule-meeting {
+        width: 265px;
+        border-radius: 24px;
+	    padding: 11px 10px;
+    }
+
+    &--save-contact {
+        width: 170px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        background: #279B70;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 24px 24px 0px 24px;
+    }
+
+    &--visit-web {
+        width: 142px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        background: #279B70;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 24px 24px 0px 24px;
+    }
+    
+    &--grey {
+        width: 155px;
+        background: #DEDEDE;
+        color: #333333;
+        border-radius: 24px;
+	    padding: 11px 10px;
+    }
+
+    &--grid-1 {
+        width: 100%;
+    }
+
+    &--grid-2 {
+        width: 48%;
+        margin-bottom: 24px;
+
+        &:nth-child(1) {
+            margin-right: 4px;
+        }
+
+        &:nth-child(2) {
+            margin-left: 4px;
+        }
+    }
+}
+
+.information {
+    margin-top: 32px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: #FFFFFF;
+	border-radius: 35px 35px 0px 0px;
+    
+    &__top-bar {
+        width: 100%;
+        height: 37px;
+        background: #FFFFFF;
+        border-radius: 35px 35px 0px 0px;
+        padding: 16px 0;
+    }
+
+    &__pin-bar {
+        width: 46px;
+        height: 5px;
+        background: #EAEAEA;
+        border-radius: 6px;
+        margin: 0 auto;
+    }
+
+    &__body-bar {
+        position: relative;
+        background: #FFFFFF;
+        height: 0;
+        overflow: hidden;
+
+        &-content {
+            padding: 10px 28px;
+        }
+    }
+    
+    &__company {
+        overflow: hidden;
+        height: 100%;
+
+        &-name {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.666667px;
+            color: #333333;
+        }
+
+        &-description {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.666667px;
+            color: #333333;
+            margin-top: 8px;
+        }
+
+        &-contact {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.666667px;
+            color: #333333;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            & > li {
+                margin-top: 8px;
+
+                & > a {
+                    color: #333333;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+
+    &__about-me {
+        &-title {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.666667px;
+            color: #333333;
+            margin-top: 24px;
+        }
+
+        &-contact {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.666667px;
+            color: #333333;
+
+            & > div {
+                margin-top: 27px;
+            }
+
+            & > div > div:nth-child(1) {
+                width: 77px;
+            }
+
+            & > div > div:nth-last-child(1) {
+                margin-left: 12px;
+            }
+        }
+    }
+
+    &__button-contact {
+        width: 50px;
+        height: 50px;
+        background: #279B70;
+        text-align: center;
+        margin: 24px 24px 0 0;
+
+        & > img {
+            vertical-align: top;
+        }
+
+        &--ig {
+            padding: 14px 0;
+        }
+
+        &--in {
+            padding: 13px 0;
+        }
+
+        &--line {
+            padding: 15px 0;
+        }
+
+        &--share {
+            padding: 13px 0;
+        }
+    }
+
+    &__office {
+        &-title {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.666667px;
+            color: #333333;
+            margin-top: 24px;
+        }
+
+        &-list {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.666667px;
+            color: #279B70;
+            margin-top: 16px;
+
+            &-address {
+                color: #333333;
+            }
+        }
+    }
+
+    &__qr-code {
+        opacity: 0;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.666667px;
+        color: #000000;
+        padding: 47px 28px 100px;
+
+        & > img {
+            margin-bottom: 36px;
+        }
+
+        &-link {
+            color: #10C582;
+        }
+    }
+
+    &__button-bottom {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+
+        &-bg {
+	        padding: 10px 0 24px;
+            background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 159.69%);
+        }
+
+        &-popup {
+            height: 0;
+            opacity: 0;
+            padding-right: 24px;
+        }
+
+        &-grey {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: #DEDEDE;
+            text-align: center;
+            margin: 0 24px 0 14px;
+
+            &--active {
+                & > .dot-first {
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                & > .dot-second {
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &__dot {
+        position: absolute;
+        top: 18px;
+        left: 12px;
+    }
+}
+
+.meeting,
+.edit-profile {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background: #FFFFFF;
+    padding: 50px 28px 0px;
+
+    &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        margin-top: 20px;
+        letter-spacing: 0.666667px;
+        color: #333333;
+    }
+}
+
+
+.form {
+    &__profile {
+        position: relative;
+        width: 109px;
+        height: 109px;
+        margin: 0 auto;
+
+        &-image {
+            width: 109px;
+            height: 109px;
+            background: #333333;
+            padding: 3px;
+            overflow: hidden;
+            margin: 15px auto 0;
+        }
+        
+        &-edit {
+            width: 37px;
+            height: 37px;
+            background: #10C582;
+	        padding: 4px 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: -30px;
+            margin-left: 75px;
+
+            & > input[type=file] {
+                font-size: 100px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                width: 37px;
+	            height: 37px;
+            }
+        }
+    }
+
+    &__input {
+        margin-top: 16px;
+        margin-bottom: 0px;
+
+        &--to {
+            margin-top: 8px;
+        }
+
+        &-label {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.666667px;
+            color: #333333;
+
+            &--time-zone {
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 10px;
+                line-height: 15px;
+                letter-spacing: 0.666667px;
+                color: #333333;
+                text-align: right;
+                margin-top: 3px;
+            }
+        }
+
+        &-tag {
+            background: #FFFFFF;
+            border: 0.5px solid #DEDEDE;
+            box-sizing: border-box;
+            border-radius: 8px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.666667px;
+            color: #333333;
+
+            &::placeholder {
+                color: rgba(51, 51, 51, 0.3);
+            }
+
+            &--date {
+                width: 48%;
+            }
+
+            &--time {
+                width: 48%;
+                margin-left: 9px;
+            }
+
+            &--textarea {
+                height: 114px !important;
+                padding: 11px 16px;
+            }
+        }
+    }
+
+    &__button {
+        margin: 32px 0;
+    }
+}
+
+.popup {
+    &__background {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #333333;
+        opacity: 0.3;
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        width: 187px;
+        height: 192px;
+        background: #FFFFFF;
+        border-radius: 25px;
+    }
+}
+
+.footer {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.666667px;
+    color: #000000;
+    text-align: center;
+    padding: 40px 0 80px;
+
+    &--pb-50 {
+        padding-bottom: 50px;
+    }
+
+    & > a {
+        color: #279B70;
+        text-decoration: none;
+    }
+}
